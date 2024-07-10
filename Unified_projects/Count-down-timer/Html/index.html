@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <link rel="stylesheet" href="../CSS/styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Countdown Timer</h1>
+        <div class="input-container">
+            <input type="datetime-local" id="target-date" required>
+            <button id="start-button">Start</button>
+        </div>
+        <div id="countdown-display">
+            <div class="time-section">
+                <span id="days">00</span>
+                <label>Days</label>
+            </div>
+            <div class="time-section">
+                <span id="hours">00</span>
+                <label>Hours</label>
+            </div>
+            <div class="time-section">
+                <span id="minutes">00</span>
+                <label>Minutes</label>
+            </div>
+            <div class="time-section">
+                <span id="seconds">00</span>
+                <label>Seconds</label>
+            </div>
+        </div>
+        <div id="message"></div>
+        <audio id="alarm-sound" src="../beep-sound/mixkit-race-countdown-1953.wav"></audio>
+    </div>
+    <script src="../Js/scripts.js"></script>
+</body>
+</html>

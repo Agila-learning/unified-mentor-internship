@@ -1,0 +1,121 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../images/pexels-elina-sazonova-3971983.jpg');
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+    transition: background-image 0.5s ease;
+}
+
+#music-player.card {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+    padding: 20px;
+    width: 350px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    transition: all 0.3s ease;
+}
+
+#music-player.card:hover {
+    transform: scale(1.05);
+}
+
+#album-art-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+   
+}
+
+#album-art {
+    width: 100px;
+    height: 100px;
+    border-radius: 10px;
+    margin-top: 12%;
+    
+}
+
+.song-info h2, .song-info h3, .song-info h4 {
+    margin: 5px 0;
+}
+
+.controls button {
+    background-color: #ff0080;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    color: #fff;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.controls button:hover {
+    background-color: #e60077;
+    transform: translateY(-3px);
+}
+
+.progress-container, .volume-container {
+    margin: 10px 0;
+}
+
+input[type="range"] {
+    width: 100%;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 5px;
+    background: #ff0080;
+    outline: none;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ff66b2;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+    background: #e60077;
+    transform: scale(1.2);
+}
+
+input[type="range"]::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background: #ff66b2;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+input[type="range"]::-moz-range-thumb:hover {
+    background: #e60077;
+    transform: scale(1.2);
+}
+
+@keyframes glow {
+    0% { box-shadow: 0 0 5px #ff0080; }
+    50% { box-shadow: 0 0 20px #ff0080; }
+    100% { box-shadow: 0 0 5px #ff0080; }
+}
+
+.controls button:active {
+    animation: glow 0.6s infinite alternate;
+}
